@@ -1,6 +1,6 @@
-# Taofeek Consulting - Coming Soon
+# Tolu Consulting - Coming Soon
 
-A modern "Coming Soon" landing page for Taofeek Consulting built with Vue 3, Vite, and Tailwind CSS.
+A modern "Coming Soon" landing page for Tolu Consulting built with Vue 3, Vite, and Tailwind CSS.
 
 ## Requirements
 

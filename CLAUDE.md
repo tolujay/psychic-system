@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A "Coming Soon" landing page for Taofeek Consulting built with Vue 3, Vite, and Tailwind CSS. The site features a modern gradient design with animations and is configured for deployment to static hosting services.
+A "Coming Soon" landing page for Tolu Consulting built with Vue 3, Vite, and Tailwind CSS. The site features a modern gradient design with animations and is configured for deployment to static hosting services.
 
 ## Common Commands
 
@@ -32,7 +32,7 @@ npm install          # Install all dependencies
 - `src/` - All source code
   - `main.js` - Application entry point
   - `App.vue` - Main landing page component (all UI is here)
-  - `assets/logo.png` - Taofeek Consulting logo
+  - `assets/logo.png` - Tolu Consulting logo
   - `style.css` - Global styles with Tailwind imports
 - `dist/` - Production build output (git-ignored)
 - `vite.config.js` - Build configuration with `base: './'` for deployment flexibility
@@ -43,7 +43,7 @@ npm install          # Install all dependencies
 - Responsive gradient background (pink/lavender to blue)
 - Animated decorative shapes with floating effect
 - Logo header with company name
-- "Notify Me" button (opens mailto:info@taofeekconsulting.com)
+- "Notify Me" button (opens mailto:info@toluconsulting.com)
 - Social icons: LinkedIn (active), Instagram (disabled)
 - Auto-updating copyright year
 - Smooth fade-in and bounce animations
