@@ -1,6 +1,10 @@
-# Static Site
+# Taofeek Consulting - Coming Soon
 
-A Vue 3 + Vite static site project.
+A modern "Coming Soon" landing page for Taofeek Consulting built with Vue 3, Vite, and Tailwind CSS.
+
+## Requirements
+
+- Node.js 22+ (use `nvm use` to switch automatically)
 
 ## Development
 
@@ -18,22 +22,30 @@ npm run build
 npm run preview
 ```
 
+## Features
+
+- 🎨 Modern gradient design with animated decorative shapes
+- 📱 Fully responsive (mobile, tablet, desktop)
+- ✨ Smooth animations and transitions
+- 📧 "Notify Me" button with email integration
+- 🔗 Social media links (LinkedIn, Instagram)
+- ©️ Auto-updating copyright year
+
 ## Deployment
 
-After building, the `dist/` folder contains all static files ready for deployment. These files can be uploaded to any static hosting service.
+After building, the `dist/` folder contains all static files ready for deployment.
 
 ### Google Cloud Storage / Firebase Hosting
 
-For Google-based deployment, you can use:
-- **Firebase Hosting**: Run `firebase init` and `firebase deploy`
-- **Google Cloud Storage**: Upload the `dist/` folder contents to a storage bucket configured for static website hosting
+For Google-based deployment:
+- **Firebase Hosting**: `firebase init` and `firebase deploy`
+- **Google Cloud Storage**: Upload `dist/` contents to a bucket configured for static website hosting
 
-## Project Structure
+Upload the entire contents of the `dist/` folder to your hosting service.
 
-- `src/` - Source files
-  - `components/` - Vue components
-  - `assets/` - Static assets
-  - `App.vue` - Root component
-  - `main.js` - Application entry point
-- `dist/` - Build output (generated)
-- `vite.config.js` - Vite configuration
+## Tech Stack
+
+- Vue 3 (Composition API)
+- Vite 7
+- Tailwind CSS v4
+- Inter font family
