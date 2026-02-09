@@ -10,11 +10,13 @@
       <!-- Logo Header -->
       <header class="pt-8 pb-4 px-4 flex justify-center animate-fade-in">
         <div class="bg-white rounded-full px-6 py-3 shadow-lg flex items-center gap-3 hover:shadow-xl transition-shadow duration-300">
-          <img
-            src="./assets/logo.png"
-            alt="Taofeek Consulting Logo"
-            class="h-8 w-8 object-contain"
-          />
+          <div class="bg-blue-600 rounded-full p-2 flex items-center justify-center">
+            <img
+              src="./assets/logo.png"
+              alt="Taofeek Consulting Logo"
+              class="h-5 w-5 object-contain invert"
+            />
+          </div>
           <span class="font-semibold text-gray-900 text-lg">Taofeek Consulting</span>
         </div>
       </header>
@@ -47,15 +49,15 @@
           <!-- Notify Me Button -->
           <a
             href="mailto:info@taofeekconsulting.com"
-            class="inline-flex items-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group animate-fade-in-up"
+            class="inline-flex items-center gap-4 bg-gray-900 text-white pl-3 pr-6 py-3 rounded-full shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transition-all duration-300 group animate-fade-in-up"
             style="animation-delay: 0.6s"
           >
-            <div class="bg-white rounded-full p-2">
-              <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-full p-3 flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <span class="font-semibold">Notify Me</span>
+            <span class="font-semibold text-lg">Notify Me</span>
             <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -65,29 +67,29 @@
 
       <!-- Footer with Social Icons and Copyright -->
       <footer class="pb-8 px-4 animate-fade-in" style="animation-delay: 0.7s">
-        <div class="flex flex-col items-center gap-4">
-          <!-- Social Icons -->
-          <div class="flex gap-4">
+        <div class="flex flex-col items-center gap-6">
+          <!-- Social Icons Container -->
+          <div class="bg-white rounded-full px-6 py-4 shadow-lg flex items-center gap-5">
             <!-- LinkedIn Icon (Active) -->
             <a
               href="https://www.linkedin.com/in/taofeek/"
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-white rounded-full p-3 shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300"
+              class="text-gray-800 hover:text-blue-600 hover:scale-110 transition-all duration-300"
               aria-label="LinkedIn"
             >
-              <svg class="w-5 h-5 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
             </a>
 
             <!-- Instagram Icon (Disabled) -->
             <div
-              class="bg-white rounded-full p-3 shadow-md opacity-40 cursor-not-allowed"
+              class="text-gray-300 cursor-not-allowed"
               aria-label="Instagram (Coming Soon)"
               title="Coming Soon"
             >
-              <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
             </div>
