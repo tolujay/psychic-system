@@ -1,163 +1,342 @@
 <template>
-	<div
-		class="min-h-screen relative overflow-hidden bg-gradient-to-br from-pink-200 via-purple-200 to-blue-300"
-	>
-		<!-- Decorative Background Shapes -->
-		<div class="decorative-shape shape-green"></div>
-		<div class="decorative-shape shape-orange-wave"></div>
-		<div class="decorative-shape shape-orange-blob"></div>
-
-		<!-- Main Container -->
-		<div class="relative z-10 min-h-screen flex flex-col">
-			<!-- Logo Header -->
-			<header class="pt-8 pb-4 px-4 flex justify-center animate-fade-in">
+	<main class="relative min-h-screen w-screen outer-bg overflow-hidden">
+		<section class="relative h-screen w-screen inner-surface">
+			<div class="relative h-full w-full overflow-hidden inner-surface">
+				<!-- top “notch” -->
 				<div
-					class="bg-white rounded-full px-6 py-3 shadow-lg flex items-center gap-3 hover:shadow-xl transition-shadow duration-300"
+					class="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-[46%]"
 				>
-					<div
-						class="bg-blue-600 rounded-full p-2 flex items-center justify-center"
-					>
-						<img
-							src="./assets/logo.png"
-							alt="Taofeek Consulting Logo"
-							class="h-5 w-5 object-contain invert"
-						/>
+					<div class="notch animate-fade-in">
+						<div
+							class="flex items-center gap-3 px-6"
+							style="margin-top: 1.8rem"
+						>
+							<!-- Logo -->
+							<img
+								:src="logoUrl"
+								alt="Tolu Consulting LLC"
+								class="brand-logo"
+								draggable="false"
+							/>
+							<span class="font-semibold text-gray-900 text-lg"
+								>Tolu Consulting</span
+							>
+						</div>
 					</div>
-					<span class="font-semibold text-gray-900 text-lg"
-						>Taofeek Consulting</span
-					>
 				</div>
-			</header>
 
-			<!-- Main Content -->
-			<main class="flex-1 flex items-center justify-center px-4 py-12">
-				<div class="text-center max-w-3xl mx-auto">
-					<!-- Thumbs Up Emoji with Animation -->
-					<div class="text-7xl mb-6 animate-bounce-slow">👍</div>
+				<!-- decorative shapes -->
+				<div class="pointer-events-none absolute inset-0 z-0">
+					<!-- soft blobs -->
+					<div class="blob blob-left" />
+					<div class="blob blob-right" />
 
-					<!-- Heading Text -->
-					<p
-						class="text-gray-700 text-sm font-medium tracking-wider mb-4 animate-fade-in-up"
-						style="animation-delay: 0.2s"
+					<div class="decorative-shape shape-green"></div>
+					<div class="decorative-shape shape-orange-wave"></div>
+					<div class="decorative-shape shape-orange-blob"></div>
+				</div>
+
+				<!-- content -->
+				<div
+					class="relative z-10 flex h-full w-full flex-col items-center justify-center px-5 pb-32 text-center"
+				>
+					<div class="mb-5 text-4xl sm:text-5xl animate-bounce-slow">👍🏽</div>
+
+					<div
+						class="mb-2 text-[12px] font-semibold tracking-[0.28em] text-[#0F172A]/70"
 					>
-						WE'RE STILL
-					</p>
+						WE’RE STILL
+					</div>
 
 					<h1
-						class="text-4xl md:text-6xl lg:text-7xl font-bold text-blue-600 mb-6 leading-tight animate-fade-in-up"
-						style="animation-delay: 0.3s"
+						class="max-w-3xl text-balance text-[40px] font-extrabold leading-[1.08] text-[#1D4ED8] sm:text-[54px] md:text-[64px]"
 					>
 						Cooking Our Website.
 					</h1>
 
 					<p
-						class="text-gray-600 text-base md:text-lg mb-4 animate-fade-in-up"
-						style="animation-delay: 0.4s"
+						class="mt-5 max-w-xl text-[16px] leading-7 text-[#0F172A]/55 sm:text-[18px]"
 					>
-						We are going to launch our website Very Soon.
-					</p>
-
-					<p
-						class="text-gray-600 text-base md:text-lg mb-10 animate-fade-in-up"
-						style="animation-delay: 0.5s"
-					>
+						We are re-launching our website very soon.
+						<br class="hidden sm:block" />
 						Stay Tune.
 					</p>
 
-					<!-- Notify Me Button -->
+					<!-- CTA -->
 					<a
-						href="mailto:info@toluconsulting.com"
-						class="inline-flex items-center gap-4 bg-gray-900 text-white py-12 px-8 rounded-full shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transition-all duration-300 group animate-fade-in-up"
-						style="animation-delay: 0.6s"
+						class="cta-spacing inline-flex items-center gap-4 rounded-full px-6 py-4 bg-[#0B1434] text-white shadow-[0_24px_50px_rgba(11,20,52,0.35)] hover:shadow-[0_28px_64px_rgba(11,20,52,0.40)] active:scale-[0.99] transition"
+						:href="mailtoHref"
+						aria-label="Notify me via email"
 					>
-						<div
-							class="bg-white rounded-full p-3 flex items-center justify-center"
+						<span
+							class="grid h-11 w-11 place-items-center rounded-full bg-white/95 shadow-[0_10px_26px_rgba(255,255,255,0.25)]"
 						>
+							<!-- mail icon -->
 							<svg
-								class="w-6 h-6 text-blue-600"
-								fill="none"
-								stroke="currentColor"
+								width="18"
+								height="18"
 								viewBox="0 0 24 24"
+								fill="none"
+								aria-hidden="true"
 							>
 								<path
+									d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"
+									stroke="#1D4ED8"
+									stroke-width="2"
+								/>
+								<path
+									d="M6.5 7.5 12 12l5.5-4.5"
+									stroke="#1D4ED8"
+									stroke-width="2"
 									stroke-linecap="round"
 									stroke-linejoin="round"
-									stroke-width="2"
-									d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
 								/>
 							</svg>
-						</div>
-						<span class="font-semibold text-lg">Notify Me</span>
-						<svg
-							class="w-5 h-5 group-hover:translate-x-1 transition-transform"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
+						</span>
+
+						<span class="text-[15px] font-semibold tracking-wide"
+							>Notify Me</span
 						>
+
+						<span class="ml-1 opacity-90">
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								aria-hidden="true"
+							>
+								<path
+									d="M9 18l6-6-6-6"
+									stroke="white"
+									stroke-width="2.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</span>
+					</a>
+				</div>
+			</div>
+			<!-- fixed footer -->
+			<footer
+				class="fixed inset-x-0 bottom-1.5 z-20 flex flex-col items-center gap-4 pb-6"
+			>
+				<!-- socials -->
+				<div
+					class="flex items-center gap-3 animate-fade-in"
+					style="animation-delay: 0.7s"
+				>
+					<a class="social-btn" href="#" aria-label="Website">
+						<!-- globe icon -->
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
 							<path
+								d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z"
+								stroke="currentColor"
+								stroke-width="2"
+							/>
+							<path d="M3 12h18" stroke="currentColor" stroke-width="2" />
+							<path
+								d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9Z"
+								stroke="currentColor"
+								stroke-width="2"
+							/>
+						</svg>
+					</a>
+
+					<a class="social-btn" href="#" aria-label="Instagram">
+						<!-- instagram icon -->
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+							<path
+								d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Z"
+								stroke="currentColor"
+								stroke-width="2"
+							/>
+							<path
+								d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+								stroke="currentColor"
+								stroke-width="2"
+							/>
+							<path
+								d="M17.5 6.5h.01"
+								stroke="currentColor"
+								stroke-width="3"
+								stroke-linecap="round"
+							/>
+						</svg>
+					</a>
+
+					<a class="social-btn" href="#" aria-label="LinkedIn">
+						<!-- linkedin icon -->
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+							<path
+								d="M6.5 9.5V18"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+							<path
+								d="M6.5 6.5h.01"
+								stroke="currentColor"
+								stroke-width="3"
+								stroke-linecap="round"
+							/>
+							<path
+								d="M10.5 18v-5.2c0-1.8 1-3 2.7-3
+                 1.6 0 2.3 1.1 2.3 3V18"
+								stroke="currentColor"
+								stroke-width="2"
 								stroke-linecap="round"
 								stroke-linejoin="round"
+							/>
+							<path
+								d="M17.5 12.2V18"
+								stroke="currentColor"
 								stroke-width="2"
-								d="M9 5l7 7-7 7"
+								stroke-linecap="round"
 							/>
 						</svg>
 					</a>
 				</div>
-			</main>
 
-			<!-- Footer with Social Icons and Copyright -->
-			<footer class="pb-8 px-4 animate-fade-in" style="animation-delay: 0.7s">
-				<div class="flex flex-col items-center gap-6">
-					<!-- Social Icons Container -->
-					<div
-						class="bg-white rounded-full px-6 py-4 shadow-lg flex items-center gap-5"
-					>
-						<!-- LinkedIn Icon (Active) -->
-						<a
-							href="https://www.linkedin.com/in/taofeek/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="text-gray-800 hover:text-blue-600 hover:scale-110 transition-all duration-300"
-							aria-label="LinkedIn"
-						>
-							<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-								<path
-									d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-								/>
-							</svg>
-						</a>
-
-						<!-- Instagram Icon (Disabled) -->
-						<div
-							class="text-gray-300 cursor-not-allowed"
-							aria-label="Instagram (Coming Soon)"
-							title="Coming Soon"
-						>
-							<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-								<path
-									d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-								/>
-							</svg>
-						</div>
-					</div>
-
-					<!-- Copyright -->
-					<p class="text-gray-600 text-sm">
-						&copy; {{ currentYear }} Tolu Consulting. All rights reserved.
-					</p>
+				<!-- copyright -->
+				<div class="text-[12px] text-[#0F172A]/40">
+					© {{ year }} Tolu Consulting LLC. All rights reserved.
 				</div>
 			</footer>
-		</div>
-	</div>
+		</section>
+	</main>
 </template>
 
-<script setup>
-import { computed } from "vue"
+<script setup lang="ts">
+import logoUrl from "./assets/logo.png"
 
-const currentYear = computed(() => new Date().getFullYear())
+const year = new Date().getFullYear()
+
+// opens default mail app and sets the "to" field
+const mailtoHref =
+	"mailto:info@toluconsulting.com?subject=Notify%20me&body=Hi%20Tolu%20Consulting%20LLC,%0A%0APlease%20notify%20me%20when%20the%20website%20launches.%0A"
 </script>
 
 <style scoped>
+/* OUTER PAGE BACKGROUND (lavender/blue like the template) */
+.outer-bg {
+	background:
+		radial-gradient(
+			900px 500px at 10% 15%,
+			rgba(255, 170, 220, 0.35),
+			transparent 60%
+		),
+		radial-gradient(
+			900px 500px at 90% 30%,
+			rgba(140, 200, 255, 0.45),
+			transparent 65%
+		),
+		linear-gradient(180deg, #b9badf 0%, #b7d3e6 100%);
+}
+
+/* INNER SURFACE (soft white, subtle gradient, rounded) */
+.inner-surface {
+	background:
+		radial-gradient(
+			900px 520px at 12% 18%,
+			rgba(255, 170, 220, 0.18),
+			transparent 62%
+		),
+		radial-gradient(
+			900px 520px at 88% 42%,
+			rgba(140, 200, 255, 0.22),
+			transparent 66%
+		),
+		#f7f9ff;
+	box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.04);
+}
+
+/* top “notch” container */
+.notch {
+	height: 90px;
+	width: 420px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.92);
+	box-shadow: 0 22px 60px rgba(16, 24, 40, 0.12);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* mimic the slightly scooped sides */
+.notch::before,
+.notch::after {
+	content: "";
+	position: absolute;
+	top: 34px;
+	width: 120px;
+	height: 120px;
+	border-radius: 999px;
+	background: rgba(247, 249, 255, 1);
+}
+.notch::before {
+	left: -58px;
+}
+.notch::after {
+	right: -58px;
+}
+
+.cta-spacing {
+	margin-top: 2.5rem !important;
+}
+
+/* Logo sizing so it sits cleanly like the template */
+.brand-logo {
+	height: 42px;
+	width: auto;
+	object-fit: contain;
+	filter: drop-shadow(0 10px 20px rgba(15, 23, 42, 0.12));
+}
+
+/* Responsive notch */
+@media (max-width: 640px) {
+	.notch {
+		width: 320px;
+		height: 84px;
+	}
+	.brand-logo {
+		height: 38px;
+	}
+}
+
+/* soft blobs */
+.blob {
+	position: absolute;
+	border-radius: 999px;
+	filter: blur(20px);
+	opacity: 0.25;
+}
+.blob-left {
+	left: -140px;
+	top: -120px;
+	width: 460px;
+	height: 360px;
+	background: radial-gradient(
+		circle at 30% 30%,
+		rgba(255, 170, 220, 1),
+		rgba(255, 170, 220, 0)
+	);
+}
+.blob-right {
+	right: -160px;
+	bottom: -160px;
+	width: 520px;
+	height: 420px;
+	background: radial-gradient(
+		circle at 40% 40%,
+		rgba(140, 200, 255, 1),
+		rgba(140, 200, 255, 0)
+	);
+}
+
 /* Decorative Shapes */
 .decorative-shape {
 	position: absolute;
@@ -197,6 +376,28 @@ const currentYear = computed(() => new Date().getFullYear())
 	animation-delay: 2s;
 }
 
+/* social icon buttons */
+.social-btn {
+	width: 44px;
+	height: 44px;
+	border-radius: 999px;
+	display: grid;
+	place-items: center;
+	background: rgba(255, 255, 255, 0.75);
+	color: rgba(15, 23, 42, 0.45);
+	box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1);
+	border: 1px solid rgba(15, 23, 42, 0.05);
+	transition:
+		transform 160ms ease,
+		box-shadow 160ms ease,
+		background 160ms ease;
+}
+.social-btn:hover {
+	transform: translateY(-1px);
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 22px 52px rgba(16, 24, 40, 0.12);
+}
+
 /* Animations */
 @keyframes float {
 	0%,
@@ -227,50 +428,11 @@ const currentYear = computed(() => new Date().getFullYear())
 	}
 }
 
-@keyframes fade-in-up {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
 .animate-bounce-slow {
 	animation: bounce-slow 2s ease-in-out infinite;
 }
 
 .animate-fade-in {
 	animation: fade-in 0.8s ease-out;
-}
-
-.animate-fade-in-up {
-	animation: fade-in-up 0.8s ease-out;
-	animation-fill-mode: both;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-	.shape-green {
-		width: 80px;
-		height: 80px;
-		left: 5%;
-		bottom: 20%;
-	}
-
-	.shape-orange-wave {
-		width: 100px;
-		height: 60px;
-		right: 5%;
-	}
-
-	.shape-orange-blob {
-		width: 120px;
-		height: 120px;
-		bottom: 3%;
-		right: 3%;
-	}
 }
 </style>

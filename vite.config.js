@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: './', // Use relative paths for deployment flexibility
+  base: '/psychic-system/', // GitHub Pages base path
   build: {
     outDir: 'dist',
     assetsDir: 'assets'
